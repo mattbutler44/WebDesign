@@ -1,0 +1,380 @@
+<!-- the set-up / skeleton of the document -->
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <!-- The title of the page and some meta-data -->
+  <title>Final Project</title>
+  <meta name="description" content="CSci 1025 Final Project">
+  <meta name="author" content="Matt Butler">
+
+  <!--Import fonts from Google Fonts-->
+  <!-- Arimo for smaller screens, Poppins for larger screens; Noto+Serif with Arimo, Sanchez with Poppins -->
+  <link href="https://fonts.googleapis.com/css?family=Arimo|Poppins|Noto+Serif|Sanchez" rel="stylesheet"> 
+	
+  <!--JavaScript image sizer-->
+  <script src="imgSizer.js"></script>
+  
+  <!-- Declare the following portion as CSS -->
+  <style type="text/css">
+  
+/* 
+   This is the CSS reset to ensure 
+   Consistency across browsers
+*/
+
+  /* import css for medium screens */
+  @import url("medium.css") screen and (min-width: 768px) and (max-width: 1023px);
+  
+  /* import css for large screens */
+  @import url("large.css") screen and (min-width: 1024px);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/* Clear-fix using a hidden dot */
+.feature:after,
+.blog:after,
+.main: after,
+.sidebar: after,
+.feature: after, 
+.nav: after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+
+/* The reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------------------------------------------------------------ */
+
+#page{
+	width: 98%;
+}
+
+body{
+	font-family: 'Poppins', 'Arial', sans-serif;
+	color: #E5E0E7;
+	font-size: 1em;
+	background-color: #000000;
+	line-height: 1.5em;
+	text-align: justify;
+}
+
+h1{
+	margin-bottom: 2%;
+	text-align: center;
+	color: white;
+	font-family: 'Sanchez', serif;
+	font-size: 1.8em;
+}
+
+h2{
+	text-align: center;
+	color: #E9FFEC;
+	font-family: 'Sanchez', serif;
+	font-size: 1.5em;
+	margin: 2%;
+}
+
+h3{
+	text-align: center;
+	font-family: 'Sanchez', serif;
+	font-size: 1.2em;
+	color: #A8F9AF;
+}
+
+.emblem{
+	width: 95%;
+	margin: 0 2.5% 0 2.5%;
+	display: none
+}
+
+.emblem img{
+	margin: 1% 30% 0% 30%;
+	max-width: 40%;
+}
+
+.logo{
+	margin: 0 0 0 2%;
+}
+
+.logo img{
+	margin: 1% 2.5% 1% 2.5%;
+	max-width: 95%;
+}
+
+.blog{
+	clear: both;
+	float: left;
+}
+
+.head-nav{
+	margin: 0 0 2% 2%;
+	float: left;
+	width: 100%;
+	background-color: #100427;
+}
+	
+.head-nav li{
+	clear: left;
+	float: left;
+	width: 48%;
+	font-weight: bold;
+}
+	
+li#spruce,
+li#cottonwood{
+	clear: right;
+	float: right;
+}
+	
+.head-nav a{
+	font-size: 0.9em;
+	display: inline-block;
+	padding: 0.25em;
+	color: white;
+	text-decoration: none;
+}
+
+.feature .figure img{
+	max-width: 60.7%;
+	clear: both;
+	margin-left: 30.526315789%; 
+}
+
+.feature .figure .figcaption{
+	text-align: left;
+	margin-left: 30.526315789%; 
+	margin-top: -1.5em;
+	background-color: black;
+	position: relative;
+}
+
+.feature p{
+	font-size: 1em;
+	float: left;
+	margin: 3% 0 2% 4%;
+	text-align: justify; 
+}
+
+.footer{
+	font-size: 0.8em;
+	text-align: justify;
+	padding-left: 3%;
+	margin: 2%;
+	clear: both;
+	background-color: #003207;
+	width: 93%;
+}
+
+.blog .main .figure img{
+	margin: 1% 14%;
+	max-width: 70%;
+}
+
+.blog .main .figure .figcaption{
+	text-align: left;
+	margin-top: -1.5em;
+	background-color: black;
+	margin-left: 14%;
+	position: relative;
+}
+
+p{
+	margin: 0.75em 2% 3% 2%;
+}
+
+</style>
+
+<!--[if IE 6]>
+	<style type="text/css">
+	img, embed, video, object{width:100%;}
+	</style>
+<![endif]-->
+
+  
+<!--HTML5 shiv allows older IE browsers to use HTML5https://code.google.com/p/html5shiv/ -->
+
+  <!--[if lt IE 9]>
+  <script src="
+http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+</head>
+
+<body>
+
+	<!-- Begin the page-->
+	<div id="page">
+
+	<!-- Display the main topic of the page -->
+	<header>
+		<div class="emblem">
+			<img src="emblem.jpg" alt="emblem" />
+		</div>
+		<div class="logo">
+			<img src="logo.jpg" alt="logo" />
+		</div> <!-- logo div closing tag -->
+	</header>
+		
+	<!-- Navigation links just under heading -->
+		<div class="nav">
+			<ul class="head-nav">
+				<li id="index"> <a href="Index.html">Home</a> </li> 
+				<li id="spruce"> <a href="Spruce.html">Sitka Spruce</a> </li> 
+				<li id="yew"> <a href="Yew.html">Pacific Yew</a> </li> 
+				<li id="cottonwood"> <a href="Cottonwood.html">Black Cottonwood</a> </li> 
+				<li id="cedar"> <a href="Cedar.html">Giant Cedar</a></li>
+			</ul>
+		</div> <!-- closes nav div -->
+
+		<div class="feature">
+			<h1>All About Trees</h1>
+			<div class="figure">
+				<img src="tree1.jpg" alt="Nice Tree"/>
+					<h3 class="figcaption">Talk about tall!</h3>
+			</div>	<!--  closes figure div -->
+
+			<article>
+				<p>
+					This tree is huge. 
+				</p>
+				<p>
+					Exactly one year ago, in May 2017 I was in Washington state. My girlfriend and I went to a national rainforest and saw trees that are just ridiculously huge. It's nearly impossible to show the scale in a picture. I am about 24x taller than a mouse. The tree is about 30x taller than me.
+				</p>
+			</article>
+		
+		</div> <!-- closes feature div -->
+	
+	<div class="blog">	
+		<div class="main">
+				<article>
+					<h2>Trees Are Cool</h2>
+					<p>
+						To many, the word tree evokes images of such ancient, powerful, and majestic structures as oaks and sequoias, the latter being among the most massive and longest-living organisms in the world. Although the majority of Earth’s terrestrial biomass is represented by trees, the fundamental importance of these seemingly ubiquitous plants for the very existence and diversity of life on Earth is perhaps not fully appreciated. The biosphere is dependent on the metabolism, death, and recycling of plants, especially trees. Their vast trunks and root systems store carbon dioxide, move water, and produce oxygen that is released into the atmosphere. The organic matter of the soil develops primarily from decayed leaves, twigs, branches, roots, and fallen trees, all of which recycle nitrogen, carbon, oxygen, and other important nutrients. There are few organisms as important as trees for maintaining Earth’s ecology.
+					</p>
+				</article>
+				<article>
+					<p>
+						
+						<div class="figure">
+							<img src="tree2.jpg"/>
+							<h3 class="figcaption">Another tree</h2>
+						</div>	<!--  closes figure div -->
+					</p>
+						<h2>Wonderland</h2>
+					<p>
+						This tree was in the Hoh Rainforest in Washington state. The area is known as Hall Of Mosses. Along the main trail there is a particularly otherworldy 200 ft side path which leads to an enchanting grove of giant maple trees, cloaked in hanging moss. One visitor to the trail wrote that “the trees stand like green-robed figures of eld.”
+					</p>
+					<p>
+						Due to the abundance of water and nutrients in the soil of the rainforest, many of the large trees have stunted roots and fall easily during particularly windy storms. This leads The Hall of Mosses to also serve as a graveyard for fallen mossy trees. However, many trees and mosses continue to grow from and over the fallen tree trunks.
+					</p>
+					<p>
+						The Rain Forest receives up to 14 ft of rain a year, resulting in the lush green canopy that covers most of the forest. The National Park Services websites states, “The Hoh Rain Forest is located in the stretch of the Pacific Northwest rainforest which once spanned the Pacific coast from southeastern Alaska to the central coast of California. The Hoh is one of the finest remaining examples of temperate rainforest in the United States.”
+					</p>
+					</article>
+					<article>
+					<h2>What's Happening?</h2>
+					<p>
+						Just so it's known, there's some sentences in this project that are mine, but almost all of it is plagarized. However, these two first pictures("Talk about tall" and "Another tree") are from the trip described in the "feature" portion of this page. And, of course, the words in the feature section are my words. If I had the time, I would create all of this site's content. I would have a lot of fun doing that, but alas time is short. Here's some more stolen words:
+					</p>
+					<p>
+						A revolution has been taking place in the scientific understanding of trees, and Wohlleben is the first writer to convey its amazements to a general audience. The latest scientific studies, conducted at well-respected universities in Germany and around the world, confirm what he has long suspected from close observation in this forest: Trees are far more alert, social, sophisticated—and even intelligent—than we thought.
+					</p>
+				</article>
+
+		</div> <!--  closes blog.main div -->
+		
+		<div class="sidebar">
+			<article>
+				<h2>Learn More About Trees</h2>
+				<h3>Do Trees Talk?</h3>
+				<p>
+					You're not the only one who has wondered. <br class="break"> <a href="https://www.smithsonianmag.com/science-nature/the-whispering-trees-180968084/">Learn More</a>
+				</p>
+			</article>
+			
+			<article>
+				<h3>Benefits of Trees</h3>
+				<p>
+					We all know trees are awesome. Here are <br class="break"> <a href="https://www.treepeople.org/tree-benefits">some reasons why.</a>
+				</p>
+			</article>
+			
+			<article>
+				<h3>Delicious?</h3>
+				<p>
+					The clickbait headline above implies trees <br class="break"> <a href="https://extension.umaine.edu/fruit/growing-fruit-trees-in-maine/varieties/">can be delicious!</a>
+				</p>
+			</article>
+			
+			<article>
+				<h3>Delicious!</h3>
+				<p>
+					This non-clickbait headline confirms (in a different way) that trees <a href="https://practicalselfreliance.com/trees-species-tap-syrup/">are delicious!</a>
+				</p>
+			</article>
+		</div> <!--  closes blog.sidebar div -->
+		</div> <!-- closes blog div-->
+	
+	<div class="footer">
+		<p>The website doesn't fall far from the tree</p>
+	</div> <!-- closes footer div -->
+	</div> <!-- closes page div -->
+	
+</body>
+</html>
+
+

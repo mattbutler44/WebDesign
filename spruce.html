@@ -1,0 +1,370 @@
+<!-- the set-up / skeleton of the document -->
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <!-- The title of the page and some meta-data -->
+  <title>Final Project</title>
+  <meta name="description" content="CSci 1025 Final Project">
+  <meta name="author" content="Matt Butler">
+
+  <!--Import fonts from Google Fonts-->
+  <!-- Arimo for smaller screens, Poppins for larger screens; Noto+Serif with Arimo, Sanchez with Poppins -->
+  <link href="https://fonts.googleapis.com/css?family=Arimo|Poppins|Noto+Serif|Sanchez" rel="stylesheet"> 
+	
+  <!--JavaScript image sizer-->
+  <script src="imgSizer.js"></script>
+  
+  <!-- Declare the following portion as CSS -->
+  <style type="text/css">
+  
+/* 
+   This is the CSS reset to ensure 
+   Consistency across browsers
+*/
+
+  /* import css for medium screens */
+  @import url("medium.css") screen and (min-width: 768px) and (max-width: 1023px);
+  
+  /* import css for large screens */
+  @import url("large.css") screen and (min-width: 1024px);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/* Clear-fix using a hidden dot */
+.blog:after,
+.main: after,
+.sidebar: after,
+.feature: after, 
+.nav: after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+
+/* The reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------------------------------------------------------------ */
+
+#page{
+	width: 98%;
+}
+
+body{
+	font-family: 'Poppins', 'Arial', sans-serif;
+	color: #E5E0E7;
+	font-size: 1em;
+	background-color: #000000;
+	line-height: 1.5em;
+	text-align: justify;
+}
+
+h1{
+	margin-bottom: 10%;
+	text-align: center;
+	color: #007904;
+	font-family: 'Sanchez', serif;
+	font-size: 1.8em;
+}
+
+h2{
+	text-align: center;
+	color: #A8F9AF;
+	font-family: 'Sanchez', serif;
+	font-size: 1.5em;
+	margin: 2%;
+}
+
+h3{
+	text-align: center;
+	font-family: 'Sanchez', serif;
+	font-size: 1.2em;
+	color: #A8F9AF;
+}
+
+.emblem{
+	width: 95%;
+	margin: 0 2.5% 0 2.5%;
+	display: none
+}
+
+.emblem img{
+	margin: 1% 30% 0% 30%;
+	max-width: 40%;
+}
+
+.logo{
+	margin: 0 0 0 2%;
+}
+
+.logo img{
+	margin: 1% 2.5% 1% 2.5%;
+	max-width: 95%;
+}
+
+.blog{
+	clear: both;
+	float: left;
+}
+
+.head-nav{
+	margin: 0 0 2% 2%;
+	float: left;
+	width: 100%;
+	background-color: #100427;
+}
+	
+.head-nav li{
+	clear: left;
+	float: left;
+	width: 48%;
+	font-weight: bold;
+}
+	
+li#spruce,
+li#cottonwood{
+	clear: right;
+	float: right;
+}
+	
+.head-nav a{
+	font-size: 0.9em;
+	display: inline-block;
+	padding: 0.25em;
+	color: white;
+	text-decoration: none;
+}
+
+.footer{
+	font-size: 0.8em;
+	text-align: justify;
+	padding-left: 3%;
+	margin: 2%;
+	clear: both;
+	background-color: #003207;
+	width: 93%;
+}
+
+.blog .main .figure img{
+	margin: 1% 14%;
+	max-width: 70%;
+}
+
+.blog .main .figure .figcaption{
+	text-align: left;
+	margin-top: -1.5em;
+	background-color: black;
+	margin-left: 14%;
+	position: relative;
+}
+
+p{
+	margin: 0.75em 2% 3% 2%;
+}
+
+.gallery img{
+	max-width: 40%;
+	margin: 2% 4%;
+}
+
+.gallery-odd{
+	clear: left;
+	float: left;
+}
+
+.gallery-even{
+	clear: right;
+	float: right;
+}
+
+.gallery-header{
+	margin: 4% auto;
+}
+
+.learn-more{
+	color: #007904;
+}
+
+</style>
+
+<!--[if IE 6]>
+	<style type="text/css">
+	img, embed, video, object{width:100%;}
+	</style>
+<![endif]-->
+
+  
+<!--HTML5 shiv allows older IE browsers to use HTML5https://code.google.com/p/html5shiv/ -->
+
+  <!--[if lt IE 9]>
+  <script src="
+http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+</head>
+
+<body>
+
+	<!-- Begin the page-->
+	<div id="page">
+
+	<!-- Display the main topic of the page -->
+	<header>
+		<div class="emblem">
+			<img src="emblem.jpg" alt="emblem" />
+		</div>
+		<div class="logo">
+			<img src="logo.jpg" alt="logo" />
+		</div> <!-- logo div closing tag -->
+	</header>
+		
+	<!-- Navigation links just under heading -->
+		<div class="nav">
+			<ul class="head-nav">
+				<li id="index"> <a href="Index.html">Home</a> </li> 
+				<li id="spruce"> <a href="Spruce.html">Sitka Spruce</a> </li> 
+				<li id="yew"> <a href="Yew.html">Pacific Yew</a> </li> 
+				<li id="cottonwood"> <a href="Cottonwood.html">Black Cottonwood</a> </li> 
+				<li id="cedar"> <a href="Cedar.html">Giant Cedar</a></li>
+			</ul>
+		</div> <!-- closes nav div -->
+	
+	<div class="blog">
+			<h1>All About Sitka Spruce</h1>
+		<div class="main">
+				<article>
+					<h2>Where Ya From?</h2>
+					<p>
+						Sitka Spruces often start their lives on nurse logs and can grow quickly when young. They grow best in moist, foggy rainforests where they can attain great size.
+					</p>
+					<p>
+						Sitka Spruce grows along the Pacific Coast and in the coastal forests to elevations of several hundred feet. At higher elevations, it is usually replaced by western hemlock. It also grows along coastal rivers some miles inland and along the Columbia River as far east as the Columbia Gorge. Near the Coast, the wind often deforms the trees, as shown in a photo in the gallery. 
+					</p>
+					<p>
+					Sitka Spruce is named after Sitka, Alaska, and it is the state tree of Alaska. Sitchensis refers to Sitka, Alaska. Other common names: Tideland Spruce, Coast Spruce, and Yellow Spruce.
+					</p>
+				</article>
+				<article>
+						<h2>How Big An Ol Boy Are Ya?</h2>
+					<p>
+						Sitka Spruce typically reach 180 to 225 feet (55-70m).  The tallest are over 250 feet (75m) tall.  The largest is at a resort on Lake Quinault and has a diameter greater than 17 feet (5m)!  Most of the giants are found in Olympic National Park, Vancouver Island, and the northern Oregon Coast.  The oldest are over 1300 years old.
+					</p>
+				</article>
+				<article>
+					<h2>Bark vs Bite</h2>
+					<p>
+						The bark is very thin, brown or purplish grey, and breaks up into small scales.
+					</p>
+				</article>
+				<article>
+					<h2>Don't Leaf Me!</h2>
+					<p>
+						Needles are light green to bluish-green, stiff, and sharp. They are four-sided but slightly flattened with two white bands running along the upper surface and two narrower bands along the lower surface. The needles are arranged spirally along the twig and are attached by small pegs which remain on the twig after the needles fall.
+					</p>
+				</article>
+
+		</div> <!--  closes blog.main div -->
+		
+		<div class="sidebar">
+			<article>
+				<h2 class="learn-more">Hungry For More?</h2>
+				<h3>First Up</h3>
+				<p>
+					From the British Columbia .gov site: <br class="break"> <a href="https://www.for.gov.bc.ca/hfd/library/documents/treebook/sitkaspruce.htm">Learn more.</a>
+				</p>
+			</article>
+			
+			<article>
+				<h3>Up Next</h3>
+				<p>
+					Another great source of info: <br class="break"> <a href="http://nativeplantspnw.com/sitka-spruce-picea-sitchensis/">Learn more.</a>
+				</p>
+			</article>
+			
+			<article>
+				<h3>Trifecta</h3>
+				<p>
+					A great guide to trees in the northwest: <br class="break"> <a href="http://nwconifers.com/nwlo/sitka.htm">Learn more.</a>
+				</p>
+			</article>
+		</div> <!--  closes blog.sidebar div -->
+		</div> <!-- closes blog div-->
+
+		<div class="gallery">
+				<h1 class="gallery-header">Photo Gallery</h1>
+				<div class="figure">
+			<img class="gallery-odd" src="spruce1.jpg">
+				</div>
+				<div class="figure">
+			<img class="gallery-even" src="spruce2.jpg">
+				</div>
+				<div class="figure">
+			<img class="gallery-odd" src="spruce3.jpg">
+				</div>
+				<div class="figure">
+			<img class="gallery-even" src="spruce4.jpg">
+				</div>
+		</div> <!-- closes gallery -->
+
+	<div class="footer">
+		<p>The website doesn't fall far from the tree</p>
+	</div> <!-- closes footer div -->
+
+	</div> <!-- closes page div -->
+	
+</body>
+</html>
+
+

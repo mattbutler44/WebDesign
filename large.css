@@ -1,0 +1,41 @@
+h1{
+	margin-bottom: 1%
+}
+
+h3{
+	text-align: left;
+}	
+
+.break{
+	visibility: visible;
+}
+
+.gallery-odd{
+	clear: both;
+	margin: 1% 2%;
+	max-width: 20%;
+}
+
+.gallery-even{
+	clear: both;
+	margin: 1% 2%;
+	max-width: 20%;
+}
+
+.blog{
+	background: #000000 url("blogBg.jpg") repeat-y 67% 0;
+	width: 90%;
+	margin: 1% 5%;
+}
+
+.blog .main{
+	clear: left;
+	float: left;
+	width: 55%;
+}
+
+.blog .sidebar{
+	clear: right;
+	float: right;
+	width: 35%;
+}

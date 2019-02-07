@@ -1,0 +1,360 @@
+<!-- the set-up / skeleton of the document -->
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <!-- The title of the page and some meta-data -->
+  <title>Final Project</title>
+  <meta name="description" content="CSci 1025 Final Project">
+  <meta name="author" content="Matt Butler">
+
+  <!--Import fonts from Google Fonts-->
+  <!-- Arimo for smaller screens, Poppins for larger screens; Noto+Serif with Arimo, Sanchez with Poppins -->
+  <link href="https://fonts.googleapis.com/css?family=Arimo|Poppins|Noto+Serif|Sanchez" rel="stylesheet"> 
+	
+  <!--JavaScript image sizer-->
+  <script src="imgSizer.js"></script>
+  
+  <!-- Declare the following portion as CSS -->
+  <style type="text/css">
+  
+/* 
+   This is the CSS reset to ensure 
+   Consistency across browsers
+*/
+
+  /* import css for medium screens */
+  @import url("medium.css") screen and (min-width: 768px) and (max-width: 1023px);
+  
+  /* import css for large screens */
+  @import url("large.css") screen and (min-width: 1024px);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/* Clear-fix using a hidden dot */
+.blog:after,
+.main: after,
+.sidebar: after,
+.feature: after, 
+.nav: after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+
+/* The reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------------------------------------------------------------ */
+
+#page{
+	width: 98%;
+}
+
+body{
+	font-family: 'Poppins', 'Arial', sans-serif;
+	color: #E5E0E7;
+	font-size: 1em;
+	background-color: #000000;
+	line-height: 1.5em;
+	text-align: justify;
+}
+
+h1{
+	margin-bottom: 10%;
+	text-align: center;
+	color: #007904;
+	font-family: 'Sanchez', serif;
+	font-size: 1.8em;
+}
+
+h2{
+	text-align: center;
+	color: #A8F9AF;
+	font-family: 'Sanchez', serif;
+	font-size: 1.5em;
+	margin: 2%;
+}
+
+h3{
+	text-align: center;
+	font-family: 'Sanchez', serif;
+	font-size: 1.2em;
+	color: #A8F9AF;
+}
+
+.emblem{
+	width: 95%;
+	margin: 0 2.5% 0 2.5%;
+	display: none
+}
+
+.emblem img{
+	margin: 1% 30% 0% 30%;
+	max-width: 40%;
+}
+
+.logo{
+	margin: 0 0 0 2%;
+}
+
+.logo img{
+	margin: 1% 2.5% 1% 2.5%;
+	max-width: 95%;
+}
+
+.blog{
+	clear: both;
+	float: left;
+}
+
+.head-nav{
+	margin: 0 0 2% 2%;
+	float: left;
+	width: 100%;
+	background-color: #100427;
+}
+	
+.head-nav li{
+	clear: left;
+	float: left;
+	width: 48%;
+	font-weight: bold;
+}
+	
+li#spruce,
+li#cottonwood{
+	clear: right;
+	float: right;
+}
+	
+.head-nav a{
+	font-size: 0.9em;
+	display: inline-block;
+	padding: 0.25em;
+	color: white;
+	text-decoration: none;
+}
+
+.footer{
+	font-size: 0.8em;
+	text-align: justify;
+	padding-left: 3%;
+	margin: 2%;
+	clear: both;
+	background-color: #003207;
+	width: 93%;
+}
+
+.blog .main .figure img{
+	margin: 1% 14%;
+	max-width: 70%;
+}
+
+.blog .main .figure .figcaption{
+	text-align: left;
+	margin-top: -1.5em;
+	background-color: black;
+	margin-left: 14%;
+	position: relative;
+}
+
+p{
+	margin: 0.75em 2% 3% 2%;
+}
+
+.gallery img{
+	max-width: 45%;
+	margin: 2% 2%;
+}
+
+.gallery-odd{
+	clear: left;
+	float: left;
+}
+
+.gallery-even{
+	clear: right;
+	float: right;
+}
+
+.gallery-header{
+	margin: 4% auto;
+}
+
+.learn-more{
+	color: #007904;
+}
+
+</style>
+
+<!--[if IE 6]>
+	<style type="text/css">
+	img, embed, video, object{width:100%;}
+	</style>
+<![endif]-->
+
+  
+<!--HTML5 shiv allows older IE browsers to use HTML5https://code.google.com/p/html5shiv/ -->
+
+  <!--[if lt IE 9]>
+  <script src="
+http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+</head>
+
+<body>
+
+	<!-- Begin the page-->
+	<div id="page">
+
+	<!-- Display the main topic of the page -->
+	<header>
+		<div class="emblem">
+			<img src="emblem.jpg" alt="emblem" />
+		</div>
+		<div class="logo">
+			<img src="logo.jpg" alt="logo" />
+		</div> <!-- logo div closing tag -->
+	</header>
+		
+	<!-- Navigation links just under heading -->
+		<div class="nav">
+			<ul class="head-nav">
+				<li id="index"> <a href="Index.html">Home</a> </li> 
+				<li id="spruce"> <a href="Spruce.html">Sitka Spruce</a> </li> 
+				<li id="yew"> <a href="Yew.html">Pacific Yew</a> </li> 
+				<li id="cottonwood"> <a href="Cottonwood.html">Black Cottonwood</a> </li> 
+				<li id="cedar"> <a href="Cedar.html">Giant Cedar</a></li>
+			</ul>
+		</div> <!-- closes nav div -->
+	
+	<div class="blog">
+			<h1>Black Cottonwood</h1>
+		<div class="main">
+				<article>
+					<h2>Where Ya From?</h2>
+					<p>
+						Throughout its wide range, black cottonwood grows in climates that vary from humid to arid. Cottonwood thrives in the humid climate of the coastal Northwest, although it grows along rivers in arid regions as well. 
+					</p>
+					<p>
+						Black cottonwood grows from Kodiak Island in Alaska (lat 62°N) to northern Baja California (lat 31°N), and eastward to the Rocky Mountains in Idaho, Montana, and Canada. In the Pacific Northwest, black cottonwood is most abundant in the Puget Sound basin and in the Columbia and Willamette river basins.
+					</p>
+				</article>
+				<article>
+						<h2>How Big An Ol Boy Are Ya?</h2>
+					<p>
+						Mature cottonwoods attain heights of 125 to 150 ft (225 ft maximum) and diameters of 48 to 60 in. (108 in. maximum). Cottonwoods mature as early as 60 years and live at least 200 years. In forest stands, cottonwoods develop narrow, cylindrical crowns and long clear boles. Open-grown trees develop deep crowns with large branches, often on single, massive stems. Natural rooting habits are not well known; planted cuttings develop deep, spreading roots.
+					</p>
+				</article>
+				<article>
+					<h2>Don't Leaf Me!</h2>
+					<p>
+						The leaf blades are oval to heart-shaped, with a point on the end; the petioles are 1-2 in. long; look for the pair of glands where the petiole joins the blade. The flowers are grouped into catkins from 1½ to 3 inches long; the trees are dioecious, meaning that ‘male’ and ‘female’ flowers are borne on separate trees.
+					</p>
+					<p>
+						Though not as showy as the leaves of their famous (but less common) relative, the quaking aspen, the leaves turn a beautiful yellow in autumn. During spring and summer, the light green leaves of the tall trees often indicate a source of water in the deserts the Great Basin or Modoc Plateau.
+					</p>
+					<p>
+						Although the flowers are inconspicuous,this species is well known for its fuzzy fruits, which during spring and early summer float down from the trees, creating the appearance of a light warm-season snowfall.
+					</p>
+				</article>
+
+		</div> <!--  closes blog.main div -->
+		
+		<div class="sidebar">
+			<article>
+				<h2 class="learn-more">Hungry For More?</h2>
+				<h3>First Up</h3>
+				<p>
+					An Oregon State University paper has great info: <br class="break"> <a href="http://owic.oregonstate.edu/black-cottonwood-populus-trichocarpa">Learn more.</a>
+				</p>
+			</article>
+			
+			<article>
+				<h3>Up Next</h3>
+				<p>
+					Less science-y and more fun: <br class="break"> <a href="https://www.fs.fed.us/wildflowers/plant-of-the-week/populus_balsamifera.shtml">Learn more.</a>
+				</p>
+			</article>
+		</div> <!--  closes blog.sidebar div -->
+		</div> <!-- closes blog div-->
+
+		<div class="gallery">
+				<h1 class="gallery-header">Photo Gallery</h1>
+				<div class="figure">
+			<img class="gallery-odd" src="cottonwood1.jpg">
+				</div>
+				<div class="figure">
+			<img class="gallery-even" src="cottonwood2.jpg">
+				</div>
+				<div class="figure">
+			<img class="gallery-odd" src="cottonwood3.jpg">
+				</div>
+				<div class="figure">
+			<img class="gallery-even" src="cottonwood4.jpg">
+				</div>
+		</div> <!-- closes gallery -->
+
+	<div class="footer">
+		<p>The website doesn't fall far from the tree</p>
+	</div> <!-- closes footer div -->
+
+	</div> <!-- closes page div -->
+	
+</body>
+</html>
+
+
