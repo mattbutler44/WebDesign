@@ -11,3 +11,7 @@ The stylings at different sizes are handled by CSS breakpoints.
 
 Most of the design is percentage and em-based to achieve an attractive and functional design as the window resizes. 
 This, along with the break points, accommodate virtually any display and any screen size or situation. 
+
+DISCLAIMER:
+Most of the content on this site is directly taken from other sources. This project is not about the creation of content, but rather the creation of the design. I make no claim to being the creator of the content and all rights go to respective creators. 
+The external links should bring the visitor to the sources I used to populate the pages.
